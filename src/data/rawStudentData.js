@@ -1,4 +1,4 @@
-export const studentData = [
+export const rawStudentData = [
   { name: "Evelyn", assignment: "SCRUM", difficutly: 3, fun: 4 },
   { name: "Evelyn", assignment: "W1D1-1", difficutly: 3, fun: 3 },
   { name: "Evelyn", assignment: "W1D2-1", difficutly: 1, fun: 3 },

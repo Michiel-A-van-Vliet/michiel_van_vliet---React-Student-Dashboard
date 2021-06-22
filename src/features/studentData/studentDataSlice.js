@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { studentData } from "../../data/data";
+import { rawStudentData } from "../../data/rawStudentData";
 
 var i = 0;
-const initialState = studentData.map(function (entry) {
+const initialState = rawStudentData.map(function (entry) {
   return {
     id: i++,
     name: entry.name,
@@ -12,8 +12,6 @@ const initialState = studentData.map(function (entry) {
     isSelected: true,
   };
 });
-
-// console.log(initialState);
 
 export const studentDataSlice = createSlice({
   name: "counter",
