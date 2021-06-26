@@ -1,35 +1,36 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { rawStudentData } from "../../data/rawStudentData";
 
-console.log(rawStudentData);
-
 let assignmentsList = [];
-rawStudentData.forEach((element) => {
-  if (!assignmentsList.includes(element.assignment)) {
-    assignmentsList.push(element.assignment);
+rawStudentData.forEach((object) => {
+  if (!assignmentsList.includes(object.assignment)) {
+    assignmentsList.push(object.assignment);
   }
 });
 
-// console.log(assignmentsList);
-
-let tempList = [];
+let initialState = [];
 let i = 0;
 assignmentsList.forEach((element) => {
-  //   console.log(element);
-  let ratingsList = [];
-  // Do iets voor ratinglist
+  let funRatingsList = [];
+  let difficultyRatingsList = [];
+  rawStudentData.forEach((object) => {
+    if (object.assignment === element) {
+      funRatingsList.push({ name: object.name, rating: object.fun });
+      difficultyRatingsList.push({
+        name: object.name,
+        rating: object.difficutly,
+      });
+    }
+  });
+
   const newObject = {
     id: i++,
     name: element,
-    ratings: ratingsList,
+    funRatings: funRatingsList,
+    difficultyRatings: difficultyRatingsList,
   };
-  tempList.push(newObject);
+  initialState.push(newObject);
 });
-
-console.log(tempList);
-
-// const initialState = assignmentsList;
-const initialState = tempList;
 
 export const assignmentsSlice = createSlice({
   name: "assignments",
