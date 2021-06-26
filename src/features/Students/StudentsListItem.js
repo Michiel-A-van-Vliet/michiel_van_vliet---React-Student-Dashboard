@@ -6,7 +6,6 @@ const StudentsListItem = ({ id, name, lastName, isSelected }) => {
   const dispatch = useDispatch();
 
   const handleChange = () => {
-    console.log("I can change, I can cha-ange.");
     dispatch(toggleIsSelected({ id: id, isSelected: !isSelected }));
   };
 
