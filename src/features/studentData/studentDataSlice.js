@@ -14,7 +14,7 @@ const initialState = rawStudentData.map(function (entry) {
 });
 
 export const studentDataSlice = createSlice({
-  name: "counter",
+  name: "studentData",
   initialState,
   reducers: {},
 });

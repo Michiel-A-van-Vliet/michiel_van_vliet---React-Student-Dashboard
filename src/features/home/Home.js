@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Chart from "../Chart/Chart.js";
 
 const Home = () => {
   const studentData = useSelector((state) => state.studentData);
@@ -27,6 +28,8 @@ const Home = () => {
   return (
     <main>
       <h1>Home</h1>
+      <Chart />
+      <p>Aanvinkbare lijst studenten</p>
     </main>
   );
 };
