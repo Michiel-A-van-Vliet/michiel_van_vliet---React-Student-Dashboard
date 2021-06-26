@@ -10,9 +10,26 @@ rawStudentData.forEach((element) => {
   }
 });
 
-console.log(assignmentsList);
+// console.log(assignmentsList);
 
-const initialState = assignmentsList;
+let tempList = [];
+let i = 0;
+assignmentsList.forEach((element) => {
+  //   console.log(element);
+  let ratingsList = [];
+  // Do iets voor ratinglist
+  const newObject = {
+    id: i++,
+    name: element,
+    ratings: ratingsList,
+  };
+  tempList.push(newObject);
+});
+
+console.log(tempList);
+
+// const initialState = assignmentsList;
+const initialState = tempList;
 
 export const assignmentsSlice = createSlice({
   name: "assignments",
