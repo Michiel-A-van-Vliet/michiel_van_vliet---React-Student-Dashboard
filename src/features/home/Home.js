@@ -13,12 +13,12 @@ const Home = () => {
 
   let assignmentsList = [];
   selectedStudentData.forEach((element) => {
-    console.log(element);
+    // console.log(element);
     if (!assignmentsList.includes(element.assignment)) {
       assignmentsList.push(element.assignment);
     }
   });
-  console.log("* assignmentsList", assignmentsList);
+  // console.log("* assignmentsList", assignmentsList);
 
   //   let assignmentRatings = [];
   //   selectedStudentData.forEach((element) => {

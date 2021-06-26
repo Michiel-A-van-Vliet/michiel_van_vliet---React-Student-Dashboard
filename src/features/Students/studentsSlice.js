@@ -25,7 +25,7 @@ rawStudentData.forEach((element) => {
   }
 });
 
-console.log("studentsList", studentsList);
+// console.log("studentsList", studentsList);
 
 var i = 0;
 const initialState = studentsList.map(function (element) {
