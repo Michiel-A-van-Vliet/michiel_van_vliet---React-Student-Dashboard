@@ -1,22 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { rawStudentData } from "../../data/rawStudentData";
-
-const randomLastname = () => {
-  const lastNames = ["Tol", "Veerman", "Schilder", "Smit", "Boer", "Molenaar"];
-  return lastNames[Math.floor(Math.random() * lastNames.length)];
-};
-
-const randomTown = () => {
-  const towns = ["Volendam", "Singelwijk", "Edam", "Blokgouw", "Munnikeveld"];
-  return towns[Math.floor(Math.random() * towns.length)];
-};
-
-const randomTelephone = () => {
-  const theRestOfThePhoneNumber = Math.floor(
-    Math.random() * 90000000 + 10000000
-  );
-  return "06" + theRestOfThePhoneNumber;
-};
+import {
+  randomLastname,
+  randomTown,
+  randomTelephone,
+} from "../../data/randomData";
 
 var studentsList = [];
 rawStudentData.forEach((element) => {
@@ -24,8 +12,6 @@ rawStudentData.forEach((element) => {
     studentsList.push(element.name);
   }
 });
-
-// console.log("studentsList", studentsList);
 
 var i = 0;
 const initialState = studentsList.map(function (element) {
@@ -42,7 +28,16 @@ const initialState = studentsList.map(function (element) {
 export const studentsSlice = createSlice({
   name: "students",
   initialState,
-  reducers: {},
+  reducers: {
+    toggleIsSelected: (state, action) => {
+      const index = state.findIndex(
+        (student) => student.id === action.payload.id
+      );
+      state[index].isSelected = action.payload.isSelected;
+    },
+  },
 });
+
+export const { toggleIsSelected } = studentsSlice.actions;
 
 export default studentsSlice.reducer;

@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "../chart/Chart.js";
+import StudentsList from "../students/StudentsList.js";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <h1>Home</h1>
       <Chart />
       <p>Aanvinkbare lijst studenten</p>
+      <StudentsList />
     </main>
   );
 };
