@@ -15,29 +15,26 @@ const testData = [
   { assignment: "w2d5", averageRating: 1.5 },
 ];
 
-// const testAssignmentsList = ["w1d1", "w1d2", "w1d3", "w1d4"];
-
-// var studentsList = [];
-// rawStudentData.forEach((element) => {
-//   if (!studentsList.includes(element.name)) {
-//     studentsList.push(element.name);
-//   }
-// });
-
-// todo: functie die langs alle cursussen gaat.
-//       als student is geselecteerd, dan meenemen in gemiddelde.
-
-// todo:
-
 const Chart = () => {
   const students = useSelector((state) => state.students);
   const assignments = useSelector((state) => state.assignments);
 
-  // functie die checkt of student is geselecteerd. input naam van student.  boolean isSelected.
+  // functie die checkt of student is geselecteerd. input naam van student. return boolean isSelected.
   const isSelected = (studentName) => {
     let student = students.find((student) => student.name === studentName);
     return student.isSelected;
   };
+
+  // todo: functie die langs alle cursussen gaat.
+  //       als student is geselecteerd, dan meenemen in gemiddelde.
+
+  let funRatingsList = [];
+  let dificultyRatingsList = [];
+  assignments.forEach((assignment) => {
+    console.log("assignment:", assignment);
+    console.log("assignment.funRatings:", assignment.funRatings);
+    console.log("assignment.difficultyRatings:", assignment.difficultyRatings);
+  });
 
   console.log("students:", students);
   console.log("assignments:", assignments);
