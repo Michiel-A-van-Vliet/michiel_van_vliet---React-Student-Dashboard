@@ -7,8 +7,8 @@ const getAverage = (list) => {
     return 0;
   } else {
     let total = 0;
-    list.forEach((item) => {
-      total += item;
+    list.forEach((number) => {
+      total += number;
     });
     return total / list.length;
   }
