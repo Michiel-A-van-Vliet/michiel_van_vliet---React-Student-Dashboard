@@ -28,18 +28,6 @@ const Chart = () => {
     const funRatings = assignment.funRatings;
     const difficultyRatings = assignment.difficultyRatings;
 
-    // const getAverage = (list) => {
-    //   if (list.length === 0) {
-    //     return 0;
-    //   } else {
-    //     let total = 0;
-    //     list.forEach((item) => {
-    //       total += item;
-    //     });
-    //     return total / list.length;
-    //   }
-    // };
-
     let funList = [];
     funRatings.forEach((funRating) => {
       if (isSelected(funRating.name)) {
