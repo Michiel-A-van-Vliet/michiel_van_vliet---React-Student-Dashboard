@@ -2,32 +2,43 @@ import React from "react";
 import { VictoryBar, VictoryChart, VictoryTheme } from "victory";
 import { useSelector } from "react-redux";
 
+const getAverage = (list) => {
+  if (list.length === 0) {
+    return 0;
+  } else {
+    let total = 0;
+    list.forEach((item) => {
+      total += item;
+    });
+    return total / list.length;
+  }
+};
+
 const Chart = () => {
   const students = useSelector((state) => state.students);
   const assignments = useSelector((state) => state.assignments);
 
   const isSelected = (studentName) => {
-    let student = students.find((student) => student.name === studentName);
+    const student = students.find((student) => student.name === studentName);
     return student.isSelected;
   };
 
   let ratingsList = [];
-
   assignments.forEach((assignment) => {
     const funRatings = assignment.funRatings;
     const difficultyRatings = assignment.difficultyRatings;
 
-    const getAverage = (list) => {
-      if (list.length === 0) {
-        return 0;
-      } else {
-        let total = 0;
-        list.forEach((item) => {
-          total += item;
-        });
-        return total / list.length;
-      }
-    };
+    // const getAverage = (list) => {
+    //   if (list.length === 0) {
+    //     return 0;
+    //   } else {
+    //     let total = 0;
+    //     list.forEach((item) => {
+    //       total += item;
+    //     });
+    //     return total / list.length;
+    //   }
+    // };
 
     let funList = [];
     funRatings.forEach((funRating) => {
