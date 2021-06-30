@@ -7,7 +7,6 @@ const Home = () => {
     <main>
       <h1>Home</h1>
       <Chart />
-      <p>Aanvinkbare lijst studenten</p>
       <StudentsList />
     </main>
   );
