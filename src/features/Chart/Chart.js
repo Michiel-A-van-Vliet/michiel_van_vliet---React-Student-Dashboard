@@ -22,6 +22,14 @@ const getAverage = (list) => {
   }
 };
 
+const getShortName = (assignmentName) => {
+  if (assignmentName.length > 6) {
+    return assignmentName.slice(0, 5) + "*";
+  } else {
+    return assignmentName;
+  }
+};
+
 const Chart = () => {
   const students = useSelector((state) => state.students);
   const assignments = useSelector((state) => state.assignments);
@@ -51,15 +59,13 @@ const Chart = () => {
     });
 
     const newRating = {
-      assignment: assignment.name,
+      assignment: getShortName(assignment.name),
       averageFunRating: getAverage(funList),
       averageDifficultyRating: getAverage(difficultyList),
     };
 
     ratingsList.push(newRating);
   });
-
-  console.log(ratingsList);
 
   return (
     <VictoryChart
