@@ -4,6 +4,8 @@ import {
   randomLastname,
   randomTown,
   randomTelephone,
+  randomHood,
+  randomEmail,
 } from "../../data/randomData";
 
 var studentsList = [];
@@ -20,6 +22,8 @@ const initialState = studentsList.map(function (element) {
     name: element,
     lastName: randomLastname(),
     town: randomTown(),
+    hood: randomHood(),
+    email: randomEmail(),
     telephone: randomTelephone(),
     isSelected: true,
   };
