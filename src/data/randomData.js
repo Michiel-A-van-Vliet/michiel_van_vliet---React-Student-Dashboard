@@ -32,7 +32,7 @@ export const randomEmail = () => {
     "geweldige",
     "lekkere",
     "rotte",
-    "boordje",
+    "broodje",
   ];
   const middlePart = ["_", ".", "-", ""];
   const lastPart = [
@@ -44,7 +44,7 @@ export const randomEmail = () => {
     "kreeft",
     "krab",
   ];
-  const someNumbers = ["12345", "69", "777", ""];
+  const someNumbers = ["01000101", "12345", "69", "777", "42", ""];
   const providers = [
     "mail.yahoo.com",
     "hetnet.nl",
