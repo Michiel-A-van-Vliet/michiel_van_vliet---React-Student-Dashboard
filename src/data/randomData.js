@@ -1,3 +1,5 @@
+// Onder het mom van onzin, hierbij wat onzin... :)
+
 const pickFromList = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
