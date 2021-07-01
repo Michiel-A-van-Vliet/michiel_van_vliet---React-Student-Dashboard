@@ -1,7 +1,6 @@
 function Footer() {
   return (
     <footer>
-      <hr />
       <p>
         Copyright / Disclaimer / Legal stuff / Kleine Lettertjes
         <br />

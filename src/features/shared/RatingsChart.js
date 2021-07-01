@@ -12,12 +12,12 @@ import {
 const RatingsChart = ({ ratingsList }) => {
   return (
     <VictoryChart
-      domainPadding={20}
+      domainPadding={10}
       theme={VictoryTheme.material}
-      width={1000}
-      height={400}
+      width={600}
+      height={300}
     >
-      <VictoryGroup offset={5}>
+      <VictoryGroup offset={3}>
         <VictoryBar
           data={ratingsList}
           x="assignment"
@@ -35,9 +35,9 @@ const RatingsChart = ({ ratingsList }) => {
         // label="Opdracht"
         tickLabelComponent={
           <VictoryLabel
-            angle={-60}
-            style={{ fontSize: 7 }}
-            textAnchor={"end"}
+            angle={60}
+            style={{ fontSize: 7, color: "black" }}
+            textAnchor={"start"}
           />
         }
       />
@@ -45,6 +45,12 @@ const RatingsChart = ({ ratingsList }) => {
         dependentAxis
         // label="Rating"
         domain={[0, 5]}
+        tickLabelComponent={
+          <VictoryLabel
+            style={{ fontSize: 10, color: "black" }}
+            textAnchor={"end"}
+          />
+        }
       />
       <VictoryLegend
         data={[

@@ -6,7 +6,6 @@ import Students from "./features/students/Students";
 // import Assignments from "./features/assignments/Assignments";
 import Home from "./features/home/Home";
 import Student from "./features/students/Student";
-import "./App.css";
 
 function App() {
   const students = useSelector((state) => state.students);
@@ -30,7 +29,6 @@ function App() {
             </li>
           </ul>
         </nav>
-        <hr />
 
         <Switch>
           {students.map((student) => (

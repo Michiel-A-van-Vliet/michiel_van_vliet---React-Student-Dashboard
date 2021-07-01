@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  //   border: 1px solid red;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2vw;
   list-style-type: none;
@@ -29,45 +30,45 @@ hr {
 header {
   background-color: blue;
   padding: 0.5%;
-}
-header h1 {
-  color: white;
-  font-size: 1.5em;
+  h1 {
+    color: white;
+    font-size: 1.5em;
+  }
 }
 
 nav {
   background-color: lightgray;
   padding: 0.2em;
-}
-nav ul li {
-  display: inline;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-nav a {
-  font-weight: bold;
-}
-nav a:hover {
-  background-color: blue;
-  color: white;
+  ul li {
+    display: inline;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  a {
+    font-weight: bold;
+    &:hover {
+      background-color: blue;
+      color: white;
+    }
+  }
 }
 
 main {
   background-color: #ddd;
   border: 0.15em inset white;
   padding: 0.5em;
-}
-main h1 {
-  font-size: 1.5em;
-}
-main li {
-  margin: 0.2em;
+  h1 {
+    font-size: 1.5em;
+  }
+  li {
+    margin: 0.2em;
+  }
 }
 
 footer {
   padding: 0.3%;
   padding-top: 0.5%;
+  p {
+    font-size: 0.5em;
+  }
 }
-footer p {
-  font-size: 0.5em;
-}/*# sourceMappingURL=index.css.map */
