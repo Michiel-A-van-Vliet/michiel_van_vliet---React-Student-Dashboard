@@ -16,9 +16,10 @@ body {
   background-color: teal;
 }
 
-hr {
-  color: black;
-  border: 5px solid red;
+input[type="checkbox"] {
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.3em;
 }
 
 .app {
@@ -59,9 +60,23 @@ main {
   padding: 0.5em;
   h1 {
     font-size: 1.5em;
+    padding-bottom: 0.2em;
   }
   li {
     margin: 0.2em;
+  }
+  a {
+    &:hover {
+      color: white;
+      background-color: blue;
+    }
+  }
+  table {
+    border: 0.1em outset white;
+  }
+  td,
+  th {
+    border: 0.1em inset white;
   }
 }
 

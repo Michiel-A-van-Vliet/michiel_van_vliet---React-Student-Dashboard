@@ -9,9 +9,15 @@ const StudentData = () => {
         <thead>
           <tr>
             <th>Wie ben je?</th>
-            <th>Welke opdracht lever je nu in?</th>
-            <th>Hoe moeilijk vond je deze opdracht?</th>
-            <th>Hoe leuk vond je deze opdracht?</th>
+            <th>
+              Welke opdracht <br /> lever je nu in?
+            </th>
+            <th>
+              Hoe moeilijk vond <br /> je deze opdracht?
+            </th>
+            <th>
+              Hoe leuk vond je <br /> deze opdracht?
+            </th>
           </tr>
         </thead>
         <StudentDataList />
