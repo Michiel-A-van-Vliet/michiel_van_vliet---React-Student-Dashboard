@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "./Chart.js";
-import StudentsList from "../students/StudentsList.js";
+import StudentsList from "./StudentsList.js";
 
 const Home = () => {
   return (
