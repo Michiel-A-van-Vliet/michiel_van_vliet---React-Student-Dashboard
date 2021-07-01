@@ -7,13 +7,13 @@ const StudentDataList = () => {
 
   return (
     <tbody>
-      {allStudentData.map((entry) => (
+      {allStudentData.map((student) => (
         <StudentDataListItem
-          key={entry.id}
-          name={entry.name}
-          assignment={entry.assignment}
-          difficulty={entry.difficultyRating}
-          fun={entry.funRating}
+          key={student.id}
+          name={student.name}
+          assignment={student.assignment}
+          difficulty={student.difficultyRating}
+          fun={student.funRating}
         />
       ))}
     </tbody>
