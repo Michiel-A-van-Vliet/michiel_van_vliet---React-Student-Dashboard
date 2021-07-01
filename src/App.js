@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import CounterApp from "./features/counter/CounterApp";
 import StudentData from "./features/studentData/StudentData";
 import Students from "./features/students/Students";
-import Assignments from "./features/assignments/Assignments";
+// import Assignments from "./features/assignments/Assignments";
 import Home from "./features/home/Home";
 import Student from "./features/students/Student";
 import "./App.css";
@@ -13,12 +12,6 @@ function App() {
   const students = useSelector((state) => state.students);
 
   return (
-    // <div className="App">
-    //   <Home />
-    //   <StudentData />
-    //   {/* <Chart /> */}
-    // </div>
-
     <Router>
       <div>
         <nav>
@@ -26,9 +19,9 @@ function App() {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/assignments">Opdrachten</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/students">Studenten</Link>
             </li>
@@ -51,9 +44,9 @@ function App() {
           <Route path="/students">
             <Students />
           </Route>
-          <Route path="/assignments">
+          {/* <Route path="/assignments">
             <Assignments />
-          </Route>
+          </Route> */}
           <Route path="/">
             <Home />
           </Route>
