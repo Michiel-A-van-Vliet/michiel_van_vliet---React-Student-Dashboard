@@ -2,18 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import RatingsChart from "../shared/RatingsChart";
 
-const getAverage = (list) => {
-  if (list.length === 0) {
-    return 0;
-  } else {
-    let total = 0;
-    list.forEach((number) => {
-      total += number;
-    });
-    return total / list.length;
-  }
-};
-
 const getShortName = (assignmentName) => {
   if (assignmentName.length > 6) {
     return assignmentName.slice(0, 5) + "*";
@@ -22,14 +10,8 @@ const getShortName = (assignmentName) => {
   }
 };
 
-const Chart = () => {
-  const students = useSelector((state) => state.students);
+const Chart = ({ studentName }) => {
   const assignments = useSelector((state) => state.assignments);
-
-  const isSelected = (studentName) => {
-    const student = students.find((student) => student.name === studentName);
-    return student.isSelected;
-  };
 
   let ratingsList = [];
   assignments.forEach((assignment) => {
@@ -38,22 +20,24 @@ const Chart = () => {
 
     let funList = [];
     funRatings.forEach((funRating) => {
-      if (isSelected(funRating.name)) {
+      if (funRating.name === studentName) {
         funList.push(funRating.rating);
       }
     });
 
     let difficultyList = [];
     difficultyRatings.forEach((difficultyRating) => {
-      if (isSelected(difficultyRating.name)) {
+      if (difficultyRating.name === studentName) {
         difficultyList.push(difficultyRating.rating);
       }
     });
 
     const newRating = {
       assignment: getShortName(assignment.name),
-      averageFunRating: getAverage(funList),
-      averageDifficultyRating: getAverage(difficultyList),
+      averageFunRating: funList,
+      //   averageFunRating: getAverage(funList),
+      averageDifficultyRating: difficultyList,
+      //   averageDifficultyRating: getAverage(difficultyList),
     };
 
     ratingsList.push(newRating);

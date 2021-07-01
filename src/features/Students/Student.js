@@ -1,4 +1,5 @@
 import React from "react";
+import StudentChart from "./StudentChart";
 
 const Student = ({ student }) => {
   return (
@@ -16,6 +17,7 @@ const Student = ({ student }) => {
         <li>Email: {student.email}</li>
         <li>Mobiel: {student.telephone}</li>
       </ul>
+      <StudentChart studentName={student.name} />
     </main>
   );
 };

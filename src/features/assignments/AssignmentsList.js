@@ -8,7 +8,7 @@ const AssignmentsList = () => {
   return (
     <ul>
       {assignments.map((assignment) => (
-        <AssignmentsListItem key={assignment.id} />
+        <AssignmentsListItem key={assignment.id} assignment={assignment} />
       ))}
     </ul>
   );

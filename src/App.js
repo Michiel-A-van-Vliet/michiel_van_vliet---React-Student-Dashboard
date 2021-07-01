@@ -42,7 +42,7 @@ function App() {
         <Switch>
           {students.map((student) => (
             <Route key={student.id} path={"/" + student.name}>
-              <Student name={student.name} id={student.id} student={student} />
+              <Student student={student} />
             </Route>
           ))}
           <Route path="/data">

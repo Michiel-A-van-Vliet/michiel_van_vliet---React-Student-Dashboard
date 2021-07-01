@@ -11,7 +11,9 @@ function Students() {
       <ul>
         {students.map((student) => (
           <li key={student.id}>
-            <Link to={"/" + student.name}>{student.name}</Link>
+            <Link to={"/" + student.name}>
+              {student.name} {student.lastName}
+            </Link>
           </li>
         ))}
       </ul>
