@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { rawStudentData } from "../../data/rawStudentData";
 
-var i = 0;
+let i = 0;
 const initialState = rawStudentData.map(function (entry) {
   return {
     id: i++,

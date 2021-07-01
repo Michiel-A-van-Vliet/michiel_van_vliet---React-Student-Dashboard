@@ -15,7 +15,7 @@ rawStudentData.forEach((element) => {
   }
 });
 
-var i = 0;
+let i = 0;
 const initialState = studentsList.map(function (element) {
   const picUrl = "https://robohash.org/dummycat" + i + ".png?size=200x200";
   return {
