@@ -21,7 +21,7 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Dashboard</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/assignments">Opdrachten</Link>
