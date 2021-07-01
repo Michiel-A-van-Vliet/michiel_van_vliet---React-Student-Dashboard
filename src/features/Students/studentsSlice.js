@@ -8,7 +8,7 @@ import {
   randomEmail,
 } from "../../data/randomData";
 
-var studentsList = [];
+let studentsList = [];
 rawStudentData.forEach((element) => {
   if (!studentsList.includes(element.name)) {
     studentsList.push(element.name);
@@ -17,6 +17,7 @@ rawStudentData.forEach((element) => {
 
 var i = 0;
 const initialState = studentsList.map(function (element) {
+  const picUrl = "https://robohash.org/dummycat" + i + ".png?size=200x200";
   return {
     id: i++,
     name: element,
@@ -26,6 +27,7 @@ const initialState = studentsList.map(function (element) {
     email: randomEmail(),
     telephone: randomTelephone(),
     isSelected: true,
+    picture: picUrl,
   };
 });
 
